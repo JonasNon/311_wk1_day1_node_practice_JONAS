@@ -1,5 +1,9 @@
 const { numbers, strings, dates } = require('../src')
 
+
+
+
+
 describe('Numbers module', () => {
 
   test('Check if a given number is even or odd', () => {
@@ -60,11 +64,13 @@ describe('Dates module', () => {
 
   test('Return today\'s date in the format: May 29, 2019', () => {
     const cal = dates.calendar()
+    console.log(cal)
     expect(cal).toMatch(/^[A-z]{3} [0-9]{2}, [0-9]{4}$/)
   })
 
   test('Return the current time in the format: 03:21:51 PM', () => {
     const time = dates.currentTime()
+    console.log(time)
     expect(time).toMatch(/^[0-9]{2}:[0-9]{2}:[0-9]{2} [A-Z]{2}$/)
   })
 
